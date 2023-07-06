@@ -1,0 +1,81 @@
+# Ignore all log files
+*.log
+
+# Ignore specific file
+
+
+# Ignore all files in a directory
+
+
+# Ignore all .tmp files inside a specific directory
+
+
+# For Flask and Django specific files
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environment
+venv/
+ENV/
+*.virtualenv
+
+# Flask instance folder
+instance/*
+
+# Django media files - These should be served in production by a web server
+media/
+
+# Django static files - These are collected via the 'collectstatic' command
+static/
+
+# Django database - SQLite database (if used)
+*.sqlite3
+db.sqlite3
+
+# Environment variables - often contains sensitive data like secret keys
+.env
+
+# Celery (if used in Django projects)
+celerybeat-schedule
+celerybeat.pid
+
+# MySQL database files
+*.mysql
+*.sql
+*.mysqldump
+*.db
+
+# MySQL Workbench files
+*.wbk
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
