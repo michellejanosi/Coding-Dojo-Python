@@ -58,5 +58,12 @@ class User:
 
 user1 = User("Sadie", "Smith", "sadie.smith@gmail.com", 29)
 user1.display_info()
+user1.spend_points(50)
+user2 = User("Jason", "Bourne", "jbourne@gmail.com", 35)
+user3 = User("Jennifer", "varner", "jenv@yahoo.com", 48)
+user2.enroll()
+user2.spend_points(80)
+user2.display_info()
+user3.display_info()
 user1.enroll()
-user1.spend_points(100)
+user3.spend_points(350)
