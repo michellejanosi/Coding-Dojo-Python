@@ -37,6 +37,7 @@ class User:
         print("Age:", self.age)
         print("Rewards member:", self.is_rewards_member)
         print("Gold card points:", self.gold_card_points)
+        return self
 
     def enroll(self):
         # Have this method change the user's member status to True and set their gold card points to 200.
@@ -46,7 +47,7 @@ class User:
         else:
             self.is_rewards_member = True
             self.gold_card_points = 200
-            return True
+            return self
 
     def spend_points(self, amount):
         # have this method decrease the user's points by the amount specified.
@@ -55,15 +56,11 @@ class User:
             print(f"Successfully used {amount} points. New balance: {self.gold_card_points} points.")
         else:
             print("The amount must be positive and not exceed the current point balance.")
+        return self
 
 user1 = User("Sadie", "Smith", "sadie.smith@gmail.com", 29)
-user1.display_info()
-user1.spend_points(50)
+user1.display_info().spend_points(50).enroll()
 user2 = User("Jason", "Bourne", "jbourne@gmail.com", 35)
 user3 = User("Jennifer", "varner", "jenv@yahoo.com", 48)
-user2.enroll()
-user2.spend_points(80)
-user2.display_info()
-user3.display_info()
-user1.enroll()
-user3.spend_points(350)
+user2.enroll().spend_points(80).display_info()
+user3.display_info().spend_points(350)
