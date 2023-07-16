@@ -21,4 +21,4 @@ Welcome to the repository for a simple and fun Python-based card game, Higher or
 This repository is for a simple educational console game. However, if you spot any bugs or have suggestions for improvements, feel free to create an issue or submit a pull request.
 
 ## Contact 💌
-If you have any questions or want to get in touch, feel free to reach out to me on LinkedIn.
+If you have any questions or want to get in touch, feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/michellejanosi/).
