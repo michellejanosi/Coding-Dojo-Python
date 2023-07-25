@@ -1,0 +1,55 @@
+# Flask specific
+/.env
+/.venv
+
+# Python virtual environment
+/venv/
+/venv*/
+/.venv/
+/.venv*/
+
+# Compiled Python files
+*.pyc
+__pycache__/
+
+# Logs
+*.log
+
+# Environment variables file (Python dotenv)
+.env
+
+# Flask development server PID file
+*.pid
+
+# Cache and data directories
+instance/
+*.sqlite
+*.db
+
+# Local development config
+config.py
+
+# Dependencies
+/venv
+/lib/
+/build/
+/dist/
+
+# Flask uploads folder (if used)
+/uploads/
+
+# IDE specific files (can be adjusted based on your editor/IDE)
+.vscode/
+.idea/
+*.iml
+*.pyc
+*.pyo
+*.pyd
+*.class
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Ignore .zip files
+*.zip
