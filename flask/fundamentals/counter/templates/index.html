@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Number of Visits: {{ session['visits'] }}</h1>
-    <h2>Counter: {{ session['counter'] }}</h2>
-
-    <form action="/plus_two" method="POST">
-        <input type="submit" value="+2">
-    </form>
-
-    <form action="/reset" method="POST">
-        <input type="submit" value="Reset">
-    </form>
-    
-    <form action="/increment" method="POST">
-        <label for="increment_value">Increment by:</label>
-        <input type="number" id="increment_value" name="increment_value" min="1" required>
-        <input type="submit" value="Increment">
-    </form>
+    <div>
+        <h2>Number of Visits: {{ session['visits'] }}</h2>
+        <h2>Counter: {{ session['counter'] }}</h2>
+        <div class="buttons-row">
+            <form action="/plus_two" method="POST" class="form-plus-two">
+                <input type="submit" value="+2">
+            </form>
+            <form action="/reset" method="POST" class="form-reset">
+                <input type="submit" value="Reset">
+            </form>
+        </div>
+        <form action="/increment" method="POST" class="form-increment">
+            <label for="increment_value">Increment by:</label>
+            <input type="number" id="increment_value" name="increment_value" min="1" required>
+            <input type="submit" value="Increment">
+        </form>
+    </div>
 </body>
 </html>
