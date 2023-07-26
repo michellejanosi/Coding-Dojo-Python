@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <h1>Number of Visits: {{ session['visits'] }}</h1>
+    <h2>Counter: {{ session['counter'] }}</h2>
+
+    <form action="/plus_two" method="POST">
+        <input type="submit" value="+2">
+    </form>
+
+    <form action="/reset" method="POST">
+        <input type="submit" value="Reset">
+    </form>
+    
+    <form action="/increment" method="POST">
+        <label for="increment_value">Increment by:</label>
+        <input type="number" id="increment_value" name="increment_value" min="1" required>
+        <input type="submit" value="Increment">
+    </form>
+</body>
+</html>
