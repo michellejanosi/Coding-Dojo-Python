@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form action="/process" method="POST">
+            <div class="row">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="row">
+                <label for="dojo_location">Dojo Location:</label><br>
+                <select id="dojo_location" name="dojo_location">
+                    <option value="New York">New York</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Chicago">Chicago</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label for="favorite_language">Favorite Language:</label><br>
+                <select id="favorite_language" name="favorite_language">
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Java">Java</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="comment">Comment (optional):</label><br>
+                <textarea id="comment" name="comment"></textarea>
+            </div>
+
+            <!-- Ninja Bonus: Radio buttons -->
+            <div>
+                <input type="radio" id="student" name="occupation" value="Student">
+                <label for="student">Student</label><br>
+                <input type="radio" id="professional" name="occupation" value="Professional">
+                <label for="professional">Professional</label>
+            </div>
+
+            <!-- Sensei Bonus: Checkboxes -->
+            <div>
+                <input type="checkbox" id="agree" name="agree">
+                <label for="agree">I agree to the Terms and Conditions</label><br>
+            </div>
+
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

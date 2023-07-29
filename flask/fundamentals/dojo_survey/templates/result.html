@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted Info</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Submitted Info</h1>
+        <div class="results">
+            <div class="row">
+                <div class="label">Your Name:</div>
+                <div class="value">{{ result.name }}</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Dojo Location:</div>
+                <div class="value">{{ result.dojo_location }}</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Favorite Language:</div>
+                <div class="value">{{ result.favorite_language }}</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Comment:</div>
+                <div class="value">{{ result.comment }}</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Occupation:</div>
+                <div class="value">{{ result.occupation }}</div>
+            </div>
+
+            <div class="row">
+                <div class="label">Agreed to Terms and Conditions:</div>
+                <div class="value">{{ "Yes" if result.get('agree') else "No" }}</div>
+            </div>
+        </div>
+        <div class="button-container">
+            <a href="/"><button class="back">Go Back</button></a>
+        </div>
+    </div>
+</body>
+</html>
